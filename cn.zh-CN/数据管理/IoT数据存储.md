@@ -18,7 +18,7 @@
 
     如果在2019年3月1日选择存储两个月的数据（60天），那么数据存储周期为2019年3月1日至2019年4月29日。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/155547/155555748843748_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/155547/155555749943748_zh-CN.png)
 
     数据列表中显示新建完成的数据存储任务。您可以编辑或删除该任务。
 
