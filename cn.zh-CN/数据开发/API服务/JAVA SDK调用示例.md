@@ -14,7 +14,7 @@
         <dependency>
             <groupId>com.aliyun</groupId>
             <artifactId>aliyun-java-sdk-iot</artifactId>
-            <version>7.0.0</version>
+            <version>6.10.0</version>
         </dependency>
         ```
 
@@ -49,23 +49,23 @@ DefaultAcsClient client = new DefaultAcsClient(profile); //初始化SDK客户端
 
 以调用服务端订阅API接口，查询数据结果为例。
 
-``` {#codeblock_r9a_bua_gre}
+``` {#codeblock_ays_mgf_g10}
 String apiSrn = "acs:iot:*:1271039834613374:serveapi/device/getDeviceCountByStatus";
 
-InvokeDataAlgoServeApiRequest.Param param = new InvokeDataAlgoServeApiRequest.Param();
+InvokeDataAPIServiceRequest.Param param = new InvokeDataAPIServiceRequest.Param();
 // 请求参数名称
 param.setParamName("status");
 // 在线状态
 param.setParamValue("1");
 
-InvokeDataAlgoServeApiRequest request = new InvokeDataAlgoServeApiRequest();
+InvokeDataAPIServiceRequest request = new InvokeDataAPIServiceRequest();
 request.setApiSrn(apiSrn);
 request.setParams(Arrays.asList(param));
 // 请求方法 POST
 request.setSysMethod(MethodType.POST);
 
 try {
-    InvokeDataAlgoServeApiResponse response = acsClient.getAcsResponse(request);
+    InvokeDataAPIServiceResponse response = acsClient.getAcsResponse(request);
 
     System.out.println(response.getSuccess());
     System.out.println(response.getErrorMessage());
