@@ -10,17 +10,17 @@ API服务指可以将数据开发中的数据任务（使用SQL开发的数据�
 2.  左侧导航栏选择 **数据分析** \> **数据开发** \> **数据开发** 。
 3.  选择已经运行通过的数据任务，单击上方操作栏中的**生成API**。
 
-    **说明：** 数据任务必须为运行成功任务。若无数据任务，请参考[开发任务](cn.zh-CN/数据开发/开发任务.md#)编写SQL语句，完成数据任务的开发。
+    **说明：** 数据任务必须为运行成功任务。若无数据任务，请参考[开发任务](cn.zh-CN/数据开发/数据开发/开发任务.md#)编写SQL语句，完成数据任务的开发。
 
 4.  在弹出页面中设置API名称，选择要保存API的目录（默认选项为API列表，也可以选择已有的自建目录）。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/203173/155903150047545_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/203173/156196156747545_zh-CN.png)
 
 5.  单击**确定**，生成API。
 
     系统跳转至新创建的API任务，SQL已经进行转换，`where`语句后的查询条件变成参数形式，并默认展开属性参数设置面板。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/203173/155903150047546_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/203173/156196156747546_zh-CN.png)
 
 
 ## 方式二、API服务开发 {#section_ddi_ffk_whb .section}
@@ -31,11 +31,11 @@ API服务指可以将数据开发中的数据任务（使用SQL开发的数据�
 
     支持在API服务目录下新建一级文件夹，文件夹用于保存开发服务，可以添加、删除和编辑。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/203173/155903150047576_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/203173/156196156747576_zh-CN.png)
 
 4.  在已创建的文件夹名称后面，单击“`+`”号图标。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/203173/155903150047585_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/203173/156196156747585_zh-CN.png)
 
 5.  在弹出框中设置参数，并单击**确定**。
 
@@ -46,7 +46,7 @@ API服务指可以将数据开发中的数据任务（使用SQL开发的数据�
     -   也可以不设置该参数，则系统使用默认的SQL模板。默认的SQL模板如下：
 
         ``` {#codeblock_ceb_7l9_o21}
-select name,nickname,iot_id from ${system.device} where status = ${status}
+select name,nickname,iot_id from ${system.device} where status != ${status} and name != ${name} limit ${pageNo} , ${pageSize}
         ```
 
  |
@@ -57,7 +57,7 @@ select name,nickname,iot_id from ${system.device} where status = ${status}
 
     您可以编写SQL，并根据SQL中设置的变量，单击右上角**属性参数设置**（新建API完成后**属性参数设置**页面会默认打开），设置API属性参数。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/203173/155903150047607_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/203173/156196156847607_zh-CN.png)
 
     参数说明如下：
 
@@ -97,11 +97,11 @@ select name,nickname,iot_id from ${system.device} where status = ${status}
 
     在API测试页面，若没有固定请求参数，则可以填写请求参数值，然后单击**开始测试**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/203173/155903150047621_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/203173/156196156847621_zh-CN.png)
 
     查看是否成功获取**返回内容**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/203173/155903150047623_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/203173/156196156847623_zh-CN.png)
 
 9.  测试成功后，在服务开发页面右上角单击**发布**，发布API服务。
 
