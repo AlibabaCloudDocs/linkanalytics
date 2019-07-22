@@ -50,19 +50,19 @@ DefaultAcsClient client = new DefaultAcsClient(profile); //初始化SDK客户端
 以调用服务端订阅API接口，查询数据结果为例。
 
 ``` {#codeblock_ays_mgf_g10}
-String apiSrn = "acs:iot:*:1271039834613374:serveapi/device/getDeviceCountByStatus";
+String apiSrn = "your_api_srn";
 
 InvokeDataAPIServiceRequest.Param param = new InvokeDataAPIServiceRequest.Param();
 // 请求参数名称
-param.setParamName("status");
+param.setParamName("your_param_name");
 // 在线状态
-param.setParamValue("1");
+param.setParamValue("your_param_value");
 
 InvokeDataAPIServiceRequest request = new InvokeDataAPIServiceRequest();
 request.setApiSrn(apiSrn);
 request.setParams(Arrays.asList(param));
-// 请求方法 POST
-request.setSysMethod(MethodType.POST);
+// 请求方法 GET
+request.setSysMethod(MethodType.GET);
 
 try {
     InvokeDataAPIServiceResponse response = acsClient.getAcsResponse(request);
@@ -78,4 +78,16 @@ try {
     ce.printStackTrace();
 }
 ```
+
+其中，部分参数按如下说明替换参数值。
+
+-   your\_api\_srn：API的资源定位符，请替换为您实际的API资源定位符。
+
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/220159/156378507452490_zh-CN.png)
+
+-   your\_param\_name：待查询数据的参数名称，请替换为您实际的API参数名称。
+
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/220159/156378507452505_zh-CN.png)
+
+-   your\_param\_value：待查询数据的参数值，请替换为您实际的API参数值。
 
