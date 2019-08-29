@@ -1,0 +1,43 @@
+# SQL类型任务 {#task_okc_1xh_hfb .task}
+
+您可以基于StreamSQL编写业务逻辑，在SQL中定义多种数据处理函数和操作符，保存为任务，对数据进行处理。
+
+1.  在任务管理页面，单击右上角的**创建任务**。 
+
+    任务类型选择**SQL**，输入任务名称和描述，选择在云端或边缘端执行任务。
+
+    单击**确定**，新建一个SQL类型的实时数据分析任务。
+
+    ![创建SQL任务](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/155546/156705848044063_zh-CN.png)
+
+2.  在任务名称右侧操作栏中单击**查看**。 
+
+    ![查看SQL任务](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/155546/156705848044066_zh-CN.png)
+
+3.  在SQL编辑器页面右侧的**view**页签中单击**添加**，对产品进行建表，方便在SQL中引用，如下图pm\_test.wet（表名.属性）所示。 
+
+    设置view名称并选择产品和设备后单击**确定**。
+
+    ![添加view](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/155546/156705848144067_zh-CN.png)
+
+    添加完成view后，在SQL中引用。
+
+    ![SQL中引用view](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/155546/156705848144068_zh-CN.png)
+
+4.  在SQL编写页面，输入SQL之后，单击**SQL校验**，会对SQL的正确性进行初步校验。 
+    -   如果校验通过，则可以进行下一步。
+    -   如果检验失败，则会提示失败。
+
+        请根据提示信息更改SQL内容，若对提示信息有疑问或不知道如何修改，则可以从实时数据分析页面，选择一个**组件编排**任务，单击该任务后的查看，进入组件编排，单击**SQL预览**，参考SQL语句。
+
+        根据参考内容重新编写SQL后，再次进行校验，直至校验通过后，进行下一步操作。
+
+        ![SQL预览](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/155546/156705848144069_zh-CN.png)
+
+5.  任务设置完毕后，单击**发布**即可进行任务发布。 
+
+    发布之后，后台会开启实时数据任务进行实时计算，将计算结果不断的输出到设置的数据源的数据表中。
+
+    **说明：** 若任务在边缘端执行，您还需参考[边缘端流数据分析](../../../../cn.zh-CN/用户指南/流数据分析/分配流数据分析到边缘实例.md#)，完成边缘任务部署。
+
+
