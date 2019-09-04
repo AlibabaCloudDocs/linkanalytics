@@ -61,8 +61,9 @@ param.setParamValue("your_param_value");
 InvokeDataAPIServiceRequest request = new InvokeDataAPIServiceRequest();
 request.setApiSrn(apiSrn);
 request.setParams(Arrays.asList(param));
-// 请求方法 GET
-request.setSysMethod(MethodType.GET);
+// 当param为空时用请求方式用GET，如果不为空是用POST
+request.setParams(Arrays.asList(param));
+request.setSysMethod(MethodType.POST);
 
 try {
     InvokeDataAPIServiceResponse response = acsClient.getAcsResponse(request);
@@ -83,11 +84,11 @@ try {
 
 -   your\_api\_srn：API的资源定位符，请替换为您实际的API资源定位符。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/220159/156378507452490_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/220159/156758701152490_zh-CN.png)
 
 -   your\_param\_name：待查询数据的参数名称，请替换为您实际的API参数名称。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/220159/156378507452505_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/220159/156758701152505_zh-CN.png)
 
 -   your\_param\_value：待查询数据的参数值，请替换为您实际的API参数值。
 
