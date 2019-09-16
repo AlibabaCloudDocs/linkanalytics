@@ -50,7 +50,7 @@ https://iot.cn-shanghai.aliyuncs.com/?Action=Pub
 
 阿里云提供API在线调试工具 [OpenAPI Explorer](https://api.aliyun.com)。在OpenAPI Explorer页，您可以快速检索和试验调用API。系统会根据您输入的参数同步生成各语言SDK的Demo代码。各语言SDK Demo显示在页面右侧**示例代码**页签下供您参考。在**调试结果**页签下，查看API调用的真实请求URL和JSON格式的返回结果。
 
-![物联网平台API](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7563/156862296640697_zh-CN.png)
+![物联网平台API](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7563/156862298140697_zh-CN.png)
 
 ## API授权 {#section_qd5_fx5_ydb .section}
 
