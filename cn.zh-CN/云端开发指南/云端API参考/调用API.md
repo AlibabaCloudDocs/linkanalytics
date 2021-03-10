@@ -6,8 +6,6 @@
 
 您可以通过发送HTTP或HTTPS请求调用物联网平台API。
 
-您可以通过发送HTTP请求调用物联网平台API。
-
 请求结构如下：
 
 ```
@@ -23,8 +21,6 @@ http://Endpoint/?Action=xx&Parameters
 -   美国（硅谷）：`iot.us-west-1.aliyuncs.com`
 -   日本（东京）：`iot.ap-northeast-1.aliyuncs.com`
 -   德国（法兰克福）：`iot.eu-central-1.aliyuncs.com` |
-|Endpoint|调用云服务的接入地址。物联网平台的接入地址格式：`应用网关IP:port/data/api.json`。其中应用网关IP:port由项目交付时确定。|
-|Endpoint|调用云服务的接入地址。物联网平台的接入地址格式：`POP网关域名`。其中应用网关IP:port由项目交付时确定。|
 |Action|要执行的操作，即云端API接口的名称。例如，调用Pub接口向指定Topic发布消息，Action对应的值就是Pub，即`Action=Pub`。|
 |Parameters|请求参数。每个参数之间用（&）符号分隔。 请求参数由[公共请求参数](/cn.zh-CN/云端开发指南/云端API参考/公共参数.md)和API自定义参数组成。公共参数中包含API版本号、身份验证等信息。 |
 
@@ -43,30 +39,6 @@ https://iot.cn-shanghai.aliyuncs.com/?Action=Pub
 &AccessKeyId=...
 &Timestamp=2017-07-19T12:00:00Z
 &RegionId=cn-shanghai
-...
-```
-
-```
-https://应用网关IP:port/data/api.json/?Action=Pub
-&Format=XML
-&Version=2017-04-20
-&Signature=Pc5WB8gokVn0xfeu%2FZV%2BiNM1dgI%3D
-&SignatureMethod=HMAC-SHA1
-&SignatureNonce=15215528852396
-&SignatureVersion=1.0
-&Timestamp=2017-07-19T12:00:00Z
-...
-```
-
-```
-https://POP网关域名/data/api.json/?Action=Pub
-&Format=XML
-&Version=2017-04-20
-&Signature=Pc5WB8gokVn0xfeu%2FZV%2BiNM1dgI%3D
-&SignatureMethod=HMAC-SHA1
-&SignatureNonce=15215528852396
-&SignatureVersion=1.0
-&Timestamp=2017-07-19T12:00:00Z
 ...
 ```
 
