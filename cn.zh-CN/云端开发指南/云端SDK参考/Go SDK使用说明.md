@@ -48,8 +48,8 @@ func main() {
 |参数|说明|
 |--|--|
 |regionId|阿里云服务地域代码，例如华东2为`cn-shanghai`。请参见[地域和可用区]()。|
-|accessKey|您的阿里云账号的AccessKeyId。您可在[阿里云官网控制台AccessKey管理](https://ak-console.aliyun.com)中，创建或查看您的AccessKey。|
-|accessSecret|AccessKeyId对应的AccessKeySecret。在[阿里云官网控制台AccessKey管理](https://ak-console.aliyun.com)中查看。|
+|accessKey|您的阿里云账号的AccessKey ID。您可在[阿里云官网控制台AccessKey管理](https://ak-console.aliyun.com)中，创建或查看您的AccessKey。|
+|accessSecret|AccessKey ID对应的AccessKey Secret。在[阿里云官网控制台AccessKey管理](https://ak-console.aliyun.com)中查看。|
 
 ## 发起调用
 
@@ -84,7 +84,7 @@ fmt.Printf("response is %#v\n", response)
 
 ## 附录：Demo
 
-下载[云端SDK Demo](https://github.com/aliyun/iotx-api-demo)。Demo中包含Java、Python、PHP、.NET和Go版本SDK示例。
+下载[物联网平台云端SDK Demo](https://github.com/aliyun/iotx-api-demo)。Demo中包含Java、Python、PHP、.NET和Go版本SDK示例。
 
-另外，阿里云提供API在线调试工具[OpenAPI Explorer](https://api.aliyun.com)。在OpenAPI Explorer页，您可以快速检索和试验调用API。系统会根据您输入的参数同步生成各语言SDK的Demo代码。各语言SDK Demo显示在页面右侧**示例代码**页签下。在**调试结果**页签下，查看API调用的真实请求URL和JSON格式的返回结果。
+阿里云OpenAPI开发者门户提供[API在线调试工具](https://next.api.aliyun.com/api/Iot)。在**API调试**页面，您可以快速检索和体验调用API。系统会根据您输入的参数同步生成各语言SDK的Demo代码。各语言SDK Demo显示在页面右侧**SDK示例**页签下供您参考。在**调用结果**页签下，查看API调用的真实请求URL和JSON格式的返回结果。
 
