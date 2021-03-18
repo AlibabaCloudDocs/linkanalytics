@@ -33,6 +33,7 @@ keyword: [数据分析, 数据服务, API, Java SDK]
                     <artifactId>iot20180120</artifactId>
                     <version>1.1.0</version>
                 </dependency>
+                <!--以下依赖为非必须项，只为下文示例代码中JSON序列化输出结果使用-->
                 <dependency>    
                     <groupId>com.alibaba</groupId>
                     <artifactId>fastjson</artifactId>
@@ -71,7 +72,7 @@ public class JavaDemo {
 
     public static void main(String[] args_) throws Exception {
         // 您的AccessKey ID和AccessKey Secret
-        Client client = JavaDemo.createClient("LTAI4FyDFmKNBV**********", "WF3onkl8cq3cTyVW8nku**********"));
+        Client client = JavaDemo.createClient("LTAI4FyDFmKN************", "WF3onkl8cq3cTyVW8n************"));
 
         ListAnalyticsDataRequest request = new ListAnalyticsDataRequest();
         // 您的API Path
@@ -115,10 +116,10 @@ public class JavaDemo {
 
     |名称|类型|是否必传|示例值|描述|
     |--|--|----|---|--|
-    |accessKeyId|String|是|LTAI4FyDFmKNBV\*\*\*\*\*\*\*\*\*\*|登录物联网平台控制台，将鼠标移至账号头像上，然后单击**AccessKey管理**，获取AccessKey ID和AccessKey Secret。
+    |accessKeyId|String|是|LTAI4FyDFmKN\*\*\*\*\*\*\*\*\*\*\*\*|登录物联网平台控制台，将鼠标移至账号头像上，然后单击**AccessKey管理**，获取AccessKey ID和AccessKey Secret。
 
 **说明：** 如果使用RAM用户，您需授予该用户管理物联网平台的权限（AliyunIOTFullAccess），否则将连接失败。授权方法请参见[授权RAM用户访问物联网平台](/cn.zh-CN/权限管理/账号授权/RAM授权管理/RAM用户访问.md)。 |
-    |accessKeySecret|String|是|WF3onkl8cq3cTyVW8nku\*\*\*\*\*\*\*\*\*\*|
+    |accessKeySecret|String|是|WF3onkl8cq3cTyVW8n\*\*\*\*\*\*\*\*\*\*\*\*|
     |Endpoint|String|是|iot.cn-shanghai.aliyuncs.com|阿里云服务的API服务端地址。其中，地域需与物联网平台产品地域保持一致。在物联网平台控制台左上方可查看地域。RegionId的表达方法，请参见[地域和可用区]()。
 
 本示例中，地域为华东2（cn-shanghai）。 |
@@ -176,7 +177,7 @@ condition.setBetweenEnd("100");
 
 -   失败：
 
-    通过调用失败结果中的错误码，您可了解失败的原因。关于错误码更多信息，请参见[错误码]()。
+    通过调用失败结果中的错误码，您可了解失败的原因。关于错误码更多信息，请参见[错误码](/cn.zh-CN/数据服务/错误码.md)。
 
     以下示例为调用API失败后的结果，即：参数`__instance_idd__`为无效的请求参数，将其更正为`__instance_id__`后，重新发起调用。
 
