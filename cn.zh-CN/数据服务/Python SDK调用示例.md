@@ -10,7 +10,7 @@ keyword: [Python SDK, 数据分析, 数据服务, API]
 
 已开通数据分析功能，更多信息，请参见[使用数据服务](/cn.zh-CN/数据服务/使用数据服务.md)。
 
-## 发起调用
+## 安装SDK
 
 1.  安装Python开发环境。
 
@@ -38,7 +38,7 @@ keyword: [Python SDK, 数据分析, 数据服务, API]
     ```
 
 
-## 示例代码
+## 发起调用
 
 以下为调用**数据服务**下基础API历史至今设备数量相关统计的示例代码。您可参照参数说明，修改对应代码，调用指定的API。
 
@@ -48,8 +48,8 @@ from alibabacloud_iot20180120.models import ListAnalyticsDataRequest, ListAnalyt
 from alibabacloud_tea_openapi.models import Config
 
 config = Config(
-    access_key_id='LTAI4FyDFmKNBV**********',
-    access_key_secret='WF3onkl8cq3cTyVW8nku**********',
+    access_key_id='LTAI4FyDFmKN************',
+    access_key_secret='WF3onkl8cq3cTyVW8n************',
     region_id='cn-shanghai'
 )
 
@@ -59,9 +59,9 @@ client = Client(config)
 request = ListAnalyticsDataRequest()
 
 #您的API Path
-request.api_path = '/between'
+request.api_path = '/iot-cn-npk1v******/system/query/hist_dev_cnt_stat'
 #您的API所在的实例ID
-request.iot_instance_id = 'iot-cn-npk1v4i0l0e'
+request.iot_instance_id = 'iot-cn-npk1v******'
 #分页参数：页号
 request.page_num = 1
 #分页参数：页大小
@@ -94,10 +94,10 @@ print(response.body.data)
 
     |名称|类型|是否必传|示例值|描述|
     |--|--|----|---|--|
-    |access\_key\_id|String|是|LTAI4FyDFmKNBV\*\*\*\*\*\*\*\*\*\*|登录物联网平台控制台，将鼠标移至账号头像上，然后单击**AccessKey管理**，获取AccessKey ID和AccessKey Secret。
+    |access\_key\_id|String|是|LTAI4FyDFmKN\*\*\*\*\*\*\*\*\*\*\*\*|登录物联网平台控制台，将鼠标移至账号头像上，然后单击**AccessKey管理**，获取AccessKey ID和AccessKey Secret。
 
 **说明：** 如果使用RAM用户，您需授予该用户管理物联网平台的权限（AliyunIOTFullAccess），否则将连接失败。授权方法请参见[授权RAM用户访问物联网平台](/cn.zh-CN/权限管理/账号授权/RAM授权管理/RAM用户访问.md)。 |
-    |access\_key\_secret|String|是|WF3onkl8cq3cTyVW8nku\*\*\*\*\*\*\*\*\*\*|
+    |access\_key\_secret|String|是|WF3onkl8cq3cTyVW8n\*\*\*\*\*\*\*\*\*\*\*\*|
     |region\_id|String|是|cn-shanghai|您的物联网平台服务所在地域ID。 在物联网平台控制台左上方可查看地域。RegionId的表达方法，请参见[地域和可用区]()。 |
     |api\_path|String|是|/iot-cn-npk1v\*\*\*\*\*\*/system/query/hist\_dev\_cnt\_stat|API路径。在**数据服务**的API列表下，单击API对应的**查看**，进入API详情页，可查看API Patch的值。更多信息，请参见[查看与使用](/cn.zh-CN/数据服务/使用数据服务.mdsection_mky_acn_k91)。|
     |page\_num|Integer|开启分页时必传|1|分页的页码。|
@@ -153,7 +153,7 @@ condition.between_end = '1000'
 
 -   失败：
 
-    通过调用失败结果中的错误码，您可了解失败的原因。关于错误码更多信息，请参见[错误码]()。
+    通过调用失败结果中的错误码，您可了解失败的原因。关于错误码更多信息，请参见[错误码](/cn.zh-CN/数据服务/错误码.md)。
 
     以下示例为调用API失败后的结果，即：参数`__instance_idd__`为无效的请求参数，将其更正为`__instance_id__`后，重新发起调用。
 
