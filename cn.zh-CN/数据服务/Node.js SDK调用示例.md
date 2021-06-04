@@ -100,7 +100,7 @@ main();
     |regionId|String|是|cn-shanghai|您的物联网平台服务所在地域ID。 在物联网平台控制台左上方可查看地域。RegionId的表达方法，请参见[地域和可用区]()。 |
     |apiPath|String|是|/iot-cn-npk1v\*\*\*\*\*\*/system/query/hist\_dev\_cnt\_stat|API路径。在**数据服务**的API列表下，单击API对应的**查看**，进入API详情页，可查看API Patch的值。更多信息，请参见[查看与使用](/cn.zh-CN/数据服务/使用数据服务.mdsection_mky_acn_k91)。|
     |pageNum|Integer|开启分页时必传|1|分页的页码。|
-    |pageSize|Integer|开启分页时必传|100|每页显示结果的条数，最大值为200。|
+    |pageSize|Integer|开启分页时必传|100|每页显示结果的条数，最大值为100。|
     |iotInstanceId|String|是|iot-cn-npk1u\*\*\*\*\*\*|API所在的实例ID。|
 
 -   业务相关的请求参数：
@@ -166,7 +166,7 @@ main();
           hasNext: false,
           resultJson: '[{"statDate":"20210221","actDevCnt":2942,"onlineDevCntCompare":0.00,"livelyDevCntCompare":8.99,"livelyDevCnt":1527,"onlineDevRate":23.08,"crtDevCnt":169025,"livelyDevRate":51.90,"crtDevCntCompare":0.08,"onlineDevCnt":679,"actDevRate":1.74,"actDevCntCompare":4.55}]',
           pageNum: 1,
-          pageSize: 200
+          pageSize: 100
         }
       }
     }
