@@ -14,13 +14,13 @@ keyword: [Python SDK, 数据分析, 数据服务, API]
 
 1.  安装Python开发环境。
 
-    访问[Python官网](https://www.python.org/downloads/)下载Python安装包，并完成安装。目前，支持2.6.5及以上版本。
+    访问[Python官网](https://www.python.org/downloads/)，下载Python安装包，并完成安装。目前，Python SDK支持Python的2.7.x和3.x版本。
 
 2.  安装Python的包管理工具pip。（如果您已安装pip，请忽略此步骤。）
 
-    访问 [pip 官网](https://pip.pypa.io/en/stable/installing/)下载pip安装包，并完成安装。
+    访问 [pip 官网](https://pip.pypa.io/en/stable/installing/)，下载pip安装包，并完成安装。
 
-3.  安装IoT Python SDK。
+3.  以管理员权限执以下命令，安装IoT Python SDK。
 
     以管理员权限执以下命令，安装IoT Python SDK。请参见最新版[aliyun-python-sdk-iot](https://github.com/aliyun/aliyun-openapi-python-sdk/tree/master/aliyun-python-sdk-iot)信息。
 
@@ -101,7 +101,7 @@ print(response.body.data)
     |region\_id|String|是|cn-shanghai|您的物联网平台服务所在地域ID。 在物联网平台控制台左上方可查看地域。RegionId的表达方法，请参见[地域和可用区]()。 |
     |api\_path|String|是|/iot-cn-npk1v\*\*\*\*\*\*/system/query/hist\_dev\_cnt\_stat|API路径。在**数据服务**的API列表下，单击API对应的**查看**，进入API详情页，可查看API Patch的值。更多信息，请参见[查看与使用](/cn.zh-CN/数据服务/使用数据服务.mdsection_mky_acn_k91)。|
     |page\_num|Integer|开启分页时必传|1|分页的页码。|
-    |page\_size|Integer|开启分页时必传|100|每页显示结果的条数，最大值为200。|
+    |page\_size|Integer|开启分页时必传|100|每页显示结果的条数，最大值为100。|
     |iot\_instance\_id|String|是|iot-cn-npk1u\*\*\*\*\*\*|API所在的实例ID。|
 
 -   业务相关的请求参数：
@@ -148,7 +148,7 @@ condition.between_end = '1000'
     以下示例为调用API成功后的结果，即：从2021年2月21日起至调用API时，公共实例下的设备数量相关统计情况。
 
     ```
-    {'HasNext': False, 'ResultJson': '[{"statDate":"20210221","actDevCnt":2942,"onlineDevCntCompare":0.00,"livelyDevCntCompare":8.99,"livelyDevCnt":1527,"onlineDevRate":23.08,"crtDevCnt":169025,"livelyDevRate":51.90,"crtDevCntCompare":0.08,"onlineDevCnt":679,"actDevRate":1.74,"actDevCntCompare":4.55}]', 'PageNum': 1, 'PageSize': 200}
+    {'HasNext': False, 'ResultJson': '[{"statDate":"20210221","actDevCnt":2942,"onlineDevCntCompare":0.00,"livelyDevCntCompare":8.99,"livelyDevCnt":1527,"onlineDevRate":23.08,"crtDevCnt":169025,"livelyDevRate":51.90,"crtDevCntCompare":0.08,"onlineDevCnt":679,"actDevRate":1.74,"actDevCntCompare":4.55}]', 'PageNum': 1, 'PageSize': 100}
     ```
 
 -   失败：
