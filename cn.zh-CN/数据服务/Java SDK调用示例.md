@@ -126,7 +126,7 @@ public class JavaDemo {
     |apiPath|String|是|/iot-cn-npk1v\*\*\*\*\*\*/system/query/hist\_dev\_cnt\_stat|API路径。在**数据服务**的API列表下，单击API对应的**查看**，进入API详情页，可查看API Patch的值。更多信息，请参见[查看与使用](/cn.zh-CN/数据服务/使用数据服务.mdsection_mky_acn_k91)。|
     |iotInstanceId|String|是|iot-cn-npk1u\*\*\*\*\*\*|API所在的实例ID。|
     |pageNum|Integer|开启分页时必传|10|分页的页码。|
-    |pageSize|Integer|开启分页时必传|100|每页显示结果的条数，最大值为200。|
+    |pageSize|Integer|开启分页时必传|100|每页显示结果的条数，最大值为100。|
 
 -   业务相关的请求参数：
 
@@ -172,7 +172,7 @@ condition.setBetweenEnd("100");
     以下示例为调用API成功后的结果，即：从2021年2月21日起至调用API时，公共实例下的设备数量相关统计情况。
 
     ```
-    {"body":{"data":{"hasNext":false,"pageNum":1,"pageSize":200,"resultJson":"[{\"statDate\":\"20210221\",\"actDevCnt\":2942,\"onlineDevCntCompare\":0.00,\"livelyDevCntCompare\":8.99,\"livelyDevCnt\":1527,\"onlineDevRate\":23.08,\"crtDevCnt\":169025,\"livelyDevRate\":51.90,\"crtDevCntCompare\":0.08,\"onlineDevCnt\":679,\"actDevRate\":1.74,\"actDevCntCompare\":4.55}]"},"requestId":"6B78B8DB-EBDB-4451-BE30-893714******","success":true},"headers":{"access-control-allow-origin":"*","date":"Mon, 15 Mar 2021 07:24:01 GMT","content-length":"425","access-control-max-age":"172800","x-acs-request-id":"6B78B8DB-EBDB-4451-BE30-893714******","access-control-allow-headers":"X-Requested-With, X-Sequence, _aop_secret, _aop_signature","connection":"keep-alive","content-type":"application/json;charset=utf-8","access-control-allow-methods":"POST, GET, OPTIONS"}}
+    {"body":{"data":{"hasNext":false,"pageNum":1,"pageSize":100,"resultJson":"[{\"statDate\":\"20210221\",\"actDevCnt\":2942,\"onlineDevCntCompare\":0.00,\"livelyDevCntCompare\":8.99,\"livelyDevCnt\":1527,\"onlineDevRate\":23.08,\"crtDevCnt\":169025,\"livelyDevRate\":51.90,\"crtDevCntCompare\":0.08,\"onlineDevCnt\":679,\"actDevRate\":1.74,\"actDevCntCompare\":4.55}]"},"requestId":"6B78B8DB-EBDB-4451-BE30-893714******","success":true},"headers":{"access-control-allow-origin":"*","date":"Mon, 15 Mar 2021 07:24:01 GMT","content-length":"425","access-control-max-age":"172800","x-acs-request-id":"6B78B8DB-EBDB-4451-BE30-893714******","access-control-allow-headers":"X-Requested-With, X-Sequence, _aop_secret, _aop_signature","connection":"keep-alive","content-type":"application/json;charset=utf-8","access-control-allow-methods":"POST, GET, OPTIONS"}}
     ```
 
 -   失败：
